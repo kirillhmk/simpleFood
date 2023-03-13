@@ -1,0 +1,61 @@
+.contacts {
+  margin-bottom: 15px;
+  &__item {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  &__link {
+    display: block;
+    position: relative;
+  }
+
+  &__content {
+    display: block;
+    padding-left: 31px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 2;
+  }
+  &__content:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &__content--location:before {
+    background-image: url('../images/location.svg');
+  }
+  &__content--phone:before {
+    background-image: url('../images/handset.svg');
+  }
+  &__content--mail:before {
+    background-image: url('../images/mail.svg');
+  }
+}
+
+.social {
+  display: flex;
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $silver2;
+    border-radius: 50%;
+  }
+  &__icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__item:not(:last-child) {
+    margin-right: 13px;
+  }
+}

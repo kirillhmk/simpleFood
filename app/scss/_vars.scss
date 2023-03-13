@@ -1,0 +1,54 @@
+$orange:#FF6838;
+$orange-light: #FFF2ED;
+$darkBlue: #363853;
+$default: #31352B;
+$gray: #c2c2c2;
+$silver2: #ececec;
+$silver1: #f9faff;
+
+%btn {
+  padding: 13px 32px;
+  background-color: $orange;
+  color: #ffffff;
+}
+%btn-active {
+  color: #ffffff;
+  background-color: $orange;
+  path {
+    fill: #ffffff;
+  }
+}
+%underline-link {
+  line-height: 1.5;
+    color: $darkBlue;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      bottom: 2px;
+      height: 2px;
+      background-color: $darkBlue;
+      opacity: 1;
+    }
+}
+
+
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+%rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+%rubik-italic {
+  font-family: 'Rubik-Italic', sans-serif;
+  font-weight: 400;
+}
