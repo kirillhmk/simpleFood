@@ -1,0 +1,53 @@
+.int-link {
+  border-radius: 5px;
+  transition: box-shadow 0.4s, color 0.4s, background-color 0.4s, text-shadow 0.4s;
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+  }
+  &:hover {
+    box-shadow: none;
+    color: $orange;
+  }
+  &:active {
+    color: $default;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.4);
+    box-shadow: none;
+  }
+}
+
+.int-orange {
+  transition: box-shadow 0.4s, background-color 0.4s, color 0.4s;
+  &:focus {
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    color: $orange;
+    .path {
+      fill: $orange;
+    }
+  }
+  &:hover {
+    color: $orange;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 2px rgba($orange, 0.7), 0px 5px 12px rgba($orange, 0.2);
+  }
+  &:active{
+    color: $orange;
+    background: $orange-light;
+    box-shadow: none;
+  }
+}
+.int-underline {
+  &::after {
+    transition: width 0.4s, height 0.4s, opacity 0.4s, background-color 0.4s;
+  }
+  &:active::after,
+  &:hover::after {
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+  }
+}
+
+.path {
+  transition: fill 0.4s, stroke 0.4s;
+}

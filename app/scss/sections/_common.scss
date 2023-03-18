@@ -1,0 +1,61 @@
+.common {
+  padding-bottom: 120px;
+  text-align: center;
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    color: $darkBlue;
+    margin-bottom: 60px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 45px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__filter-btn {
+    font-size: 20px;
+    color: $darkBlue;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px #ECECEC;
+    border-radius: 5px;
+    transition: box-shadow 0.4s, color 0.4s, background-color 0.4s;
+    &:focus {
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    }
+    &:hover {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+      color: $orange;
+      .path {
+        fill: $orange;
+      }
+    }
+    &:active {
+      color: $darkBlue;
+      background: #FFFFFF;
+      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+      .path {
+        fill: $darkBlue;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__link {
+    // margin-bottom: 120px;
+  }
+}
+
+@import 'category';
+
+@import 'product-card';
