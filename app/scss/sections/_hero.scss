@@ -1,37 +1,39 @@
-.about {
+.hero {
+  height: calc(100vh - 160px);
+
   &__container {
+    display: flex;
+    align-items: center;
+    max-height: 660px;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: 97%;
     background-size: contain;
   }
+
   &__content {
     max-width: 450px;
-    padding: 156px 0 150px 0;
-    margin-bottom: 125px;
   }
+
   &__title {
     margin-bottom: 20px;
     font-size: 66px;
     text-transform: uppercase;
     color: $darkBlue;
-    @extend %rubik-500;
+    font-weight: 500;
   }
+
   &__title-accent {
     color: $orange;
   }
+
   &__text {
     line-height: 1.5;
     margin-bottom: 20px;
   }
+
   &__link-accent {
     display: inline-block;
     margin-right: 30px;
-    font-size: 18px;
-    letter-spacing: 0.03em;
-    @extend %btn;
-    border-radius: 6px;
-  }
-  &__link {
-    @extend %underline-link;
   }
 }

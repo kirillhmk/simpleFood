@@ -2,7 +2,7 @@ $(function(){
 
   
 
-  var mixer = mixitup('.catalog', {
+  var mixer = mixitup('.category', {
     load: {
       filter: '.burgers'
     }

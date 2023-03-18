@@ -1,14 +1,7 @@
-.catalog {
-  margin-bottom: 60px;
-  &__category {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(minmax(1,2), 1fr);
-    grid-gap: 30px;
-  }
-  &__item {
-    position: relative;
-  }
+.product-card {
+  position: relative;
+  height: 100%;
+
   &__link {
     display: flex;
     flex-direction: column;
@@ -18,22 +11,33 @@
     background-color: #ffffff;
     box-shadow: 0px 0px 0px 1px #ECECEC;
     border-radius: 5px;
+    transition: box-shadow 0.4s;
+    &:focus {
+      box-shadow: 0 3px 15px rgba($orange, 0.5);
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    }
   }
+
   &__img {
     margin-bottom: 10px;
   }
+
   &__text {
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 1.2;
     overflow: hidden;
   }
+
   &__price {
     margin: auto 0 10px 0;
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
   }
+
   &__btn {
     position: absolute;
     bottom: 20px;

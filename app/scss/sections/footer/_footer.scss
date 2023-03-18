@@ -3,17 +3,18 @@
     display: flex;
     margin-bottom: 54px;
   }
-  
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
     max-width: 200px;
     margin-right: 70px;
   }
-  .logo {
-    display: block;
-    margin-bottom: 30px;
-  }
+
   &__input {
     margin-bottom: 12px;
     padding: 13px 15px;
@@ -21,23 +22,55 @@
     font-size: 14px;
     border-radius: 5px;
     background-color: #FFFFFF;
+    transition: box-shadow 0.4s, color 0.4s, background-color 0.4s, text-shadow 0.4s;
+
     &::placeholder {
       color: #C2C2C2;
       opacity: 0.9;
+      transition: color 0.4s;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    }
+    &:hover::placeholder {
+      color: $darkBlue;
+      opacity: 0.9;
     }
   }
+
   &__btn {
-    border-radius: 5px;
-    @extend %rubik-500;
-    font-size: 14px;
-    @extend %btn;
+    font-weight: 500;
+    transition: box-shadow 0.4s, color 0.4s, background-color 0.4s;
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+      color: $orange;
+      .path {
+        fill: $orange;
+      }
+    }
+    &:hover {
+      .path {
+        fill: $orange;
+      }
+      color: $orange;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    }
+    &:active {
+      .path {
+        fill: $orange;
+      }
+      color: $orange;
+      background: $orange-light;
+      box-shadow: none;
+    }
   }
+
   &__icon {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     margin-right: 15px;
   }
+
   &__menu {
     display: grid;
     margin-top: -1px;
@@ -46,6 +79,7 @@
     grid-gap: 20px 71px;
     margin-right: 70px;
   }
+
   &__link {
     display: inline-block;
     font-size: 18px;
@@ -56,6 +90,7 @@
     padding: 30px 0;
     text-align: center;
     position: relative;
+
     &:before {
       content: '';
       position: absolute;
@@ -67,6 +102,7 @@
       background-color: rgba($gray, 0.2);
     }
   }
+
   &__copy {
     font-size: 14px;
     line-height: 1;
